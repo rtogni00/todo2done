@@ -1,0 +1,8 @@
+{
+	"id": "todo2done",
+	"name": "Todo2Done",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "Move completed tasks from a source note into a heading-organized archive.",
+	"isDesktopOnly": false
+}
