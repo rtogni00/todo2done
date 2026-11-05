@@ -5,6 +5,6 @@
 	"name": "Todo2Done",
 	"version": "1.1.0",
 	"minAppVersion": "1.1.0",
-	"description": "Move completed tasks from a source note into a heading-organized archive.",
+	"description": "Move completed tasks into a separate archive note, grouped by their original headings.",
 	"isDesktopOnly": false
 }
