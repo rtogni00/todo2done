@@ -23,10 +23,22 @@ export default defineConfig(
 				projectService: {
 					allowDefaultProject: ['eslint.config.mts', 'manifest.json'],
 				},
-				tsconfigRootDir: import.meta.dirname,
+				tsconfigRootDir: (
+					import.meta as ImportMeta & { dirname: string }
+				).dirname,
+				// tsconfigRootDir: import.meta.dirname,
 				extraFileExtensions: ['.json'],
 			},
 		},
 	},
 	...obsidianmd.configs.recommended,
+	{
+		files: ['**/*.test.ts', '**/*.spec.ts'],
+		rules: {
+			'import/no-extraneous-dependencies': [
+				'error',
+				{ devDependencies: true },
+			],
+		},
+	},
 );

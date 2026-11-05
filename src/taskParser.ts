@@ -30,12 +30,15 @@ export const UNSECTIONED_HEADING: Heading = {
 	key: '2:uncategorized',
 };
 
-const headingKey = (level: number, text: string): string =>
-	`${level}:${text
-		.replace(/\s+#+\s*$/, '')
+const headingKey = (level: number, text: string): string => {
+	const normalized = text
+		.replace(/\s+#+\s*$/, '') // strip trailing "###" (ATX closing hashes)
 		.trim()
-		.replace(/\s+/g, ' ')
-		.toLowerCase()}`;
+		.replace(/\s+/g, ' ') // collapse internal whitespace
+		.toLowerCase();
+
+	return `${level}:${normalized}`;
+};
 
 export function extractCompletedTasks(content: string): ParsedSource {
 	const lines = content.split('\n');
