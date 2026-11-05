@@ -1,9 +1,9 @@
 {
 	"author": "RobTog",
 	"authorUrl": "rtogni00.github.io",
-	"id": "todo2done",
+	"id": "todo-to-done",
 	"name": "Todo2Done",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"minAppVersion": "1.1.0",
 	"description": "Move completed tasks into a separate archive note, grouped by their original headings.",
 	"isDesktopOnly": false
